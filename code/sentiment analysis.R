@@ -19,4 +19,4 @@ barplot(colSums(s),
         las = 2,
         col = rainbow(10),
         ylab = 'Count',
-        main = 'Sentiment scores for trump tweets')
+        main = 'Sentiment scores for Biden tweets')
