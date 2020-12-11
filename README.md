@@ -42,7 +42,7 @@ polar_line <- words %>% group_by(line, handle, hour) %>% summarise(score=sum(pol
 
 - then we calcuate the sentiment score, we also store them into a new column called `polar_words` in our dataframe `words`.
 
-![2.png]('../fig/2.png')
+![2.png]('./fig/2.png')
 
 
 ```
