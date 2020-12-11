@@ -32,6 +32,8 @@ polar_line <- words %>% group_by(line, handle, hour) %>% summarise(score=sum(pol
 
 - `Regular Expression` ----> `'[^[:alnum:]]'`  , `^` match the beginning of the `string` and `[^[:alnum:]]` is a negated bracket expression that will match any char but an alnum(alphanumeric)char. For example: `'h!toyou!'` -> `'h toyou '`.
 
+- `gsub` stands for `gloab sub` and we use `Regular Expression` --> `'[[:digit:]]'`in R to get rid of numbers in our text.
+
 
 
 
