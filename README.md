@@ -40,7 +40,14 @@ polar_line <- words %>% group_by(line, handle, hour) %>% summarise(score=sum(pol
 
 - `words <- temp %>%unnest_tokens(word, text)%>%filter(!word %in% stop_words$word,str_detect(word, "^[a-z']+$"))` in this line, we unnest or the words in the column text, and delete or the `stopwords` in `english` and store them into one var called `words`. See the details in https://www.tidytextmining.com/tidytext.html.
 
-- then we calcuate the sentiment score 
+- then we calcuate the sentiment score, we also store them into a new column called `polar_words` in our dataframe `words`.
+
+```
+# Then we plot the histogram 
+ggplot(polar_line, aes(x=score, fill=handle)) + geom_histogram(position = "identity", alpha=0.4, binwidth = 1)
+```
+
+
 
 
 
