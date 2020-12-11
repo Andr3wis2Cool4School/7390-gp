@@ -49,3 +49,6 @@ polar_line <- words %>% group_by(line, handle, hour) %>% summarise(score=sum(pol
 
 
 
+
+
+
