@@ -42,9 +42,12 @@ polar_line <- words %>% group_by(line, handle, hour) %>% summarise(score=sum(pol
 
 - then we calcuate the sentiment score, we also store them into a new column called `polar_words` in our dataframe `words`.
 
+<<<<<<< HEAD
 ![2.png]('../fig/2.png')
 
 
+=======
+>>>>>>> fe52c456459c47c4fa750c84e6f46450c185f051
 ```
 # Then we plot the histogram 
 ggplot(polar_line, aes(x=score, fill=handle)) + geom_histogram(position = "identity", alpha=0.4, binwidth = 1)
@@ -66,4 +69,7 @@ ggplot(polar_line, aes(x=score, fill=handle)) + geom_histogram(position = "ident
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> fe52c456459c47c4fa750c84e6f46450c185f051
