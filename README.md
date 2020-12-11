@@ -38,7 +38,7 @@ polar_line <- words %>% group_by(line, handle, hour) %>% summarise(score=sum(pol
 
 - `Regular Expression` --> `'[ \t]{2,}'` .  We used it to get rid of horizontal tabulation.
 
-- `words <- temp %>%unnest_tokens(word, text)%>%filter(!word %in% stop_words$word,str_detect(word, "^[a-z']+$"))` in this line, we unnest or the words in the column text, and delete or the `stopwords` in `english` and store them into one var called `words`.
+- `words <- temp %>%unnest_tokens(word, text)%>%filter(!word %in% stop_words$word,str_detect(word, "^[a-z']+$"))` in this line, we unnest or the words in the column text, and delete or the `stopwords` in `english` and store them into one var called `words`. See the details in https://www.tidytextmining.com/tidytext.html.
 
 - then we calcuate the sentiment score 
 
