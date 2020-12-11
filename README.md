@@ -1,4 +1,4 @@
-# Sentiment analysis for 10000 tweets for under hastage joebiden and donaldtrump
+# Sentiment analysis for 10000 tweets for under hastage Joebiden and Donaldtrump
 **This is a 7390 group project**
 **We are using R**
 
