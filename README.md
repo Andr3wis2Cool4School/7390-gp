@@ -30,9 +30,15 @@ polar_line <- words %>% group_by(line, handle, hour) %>% summarise(score=sum(pol
 
 - Using `select` to select three columns which are `text`, `handle`(contains two vars trump and biden) and `hour` put them into a new dataframe `temp`.
 
+- `gsub` stands for `gloab sub` 
+
 - `Regular Expression` ----> `'[^[:alnum:]]'`  , `^` match the beginning of the `string` and `[^[:alnum:]]` is a negated bracket expression that will match any char but an alnum(alphanumeric)char. For example: `'h!toyou!'` -> `'h toyou '`.
 
-- `gsub` stands for `gloab sub` and we use `Regular Expression` --> `'[[:digit:]]'`in R to get rid of numbers in our text.
+- `Regular Expression` --> `'[[:digit:]]'`. We used it to get rid of numbers in our text.
+
+- `Regular Expression` --> `'[ \t]{2,}'` .  We used it to get rid of horizontal tabulation.
+
+
 
 
 
