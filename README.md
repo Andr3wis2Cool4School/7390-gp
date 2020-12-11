@@ -50,8 +50,24 @@ polar_line <- words %>% group_by(line, handle, hour) %>% summarise(score=sum(pol
 ggplot(polar_line, aes(x=score, fill=handle)) + geom_histogram(position = "identity", alpha=0.4, binwidth = 1)
 ```
 
+![1.png](fig/1.png)
 
+'''
+# Box plot
+ggplot(polar_line, aes(x=(handle), y=score)) + geom_boxplot() + 
+  stat_summary(fun.y = 'mean', geom = 'point', shape=23, size=3, fill='white')
+'''
 
+![3.png](fig/3.png)
+
+'''
+# See the sentiment score go by hour
+polar_line <- polar_line %>% group_by(handle,hour) %>% summarise(mean_score=mean(score))
+ggplot(polar_line, aes(x=hour, y=mean_score, fill=handle)) +
+  geom_bar(position="dodge",stat='identity')
+'''
+
+![4.png](fig/4.png)
 
 
 
